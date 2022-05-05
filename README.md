@@ -1,22 +1,21 @@
 # Module
 
-Python modules are hard.  This module attempts to make them easier to write.
-Here's a quick usage example.
+Python modules are hard.  `module` attempts to make them easier to write in the interpreter.
+Here's a quick usage example:
 
 
 ```
 >>> import module
->>> class Foo(metaclass=module):
-...   bar = 7
+>>> class Wat(metaclass=module):
+...   _ermelon = 5
 ...
-...   def baz():
-...     return bar
+...   def ermelon():
+...     return _ermelon
 ...
->>> Foo.baz()
-7
->>>
->>> Foo
-<module 'Foo'>
+>>> Wat.ermelon()
+5
+>>> Wat
+<module 'Wat'>
 >>> module
 <class 'module.Module'>
 ```
