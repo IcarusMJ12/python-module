@@ -1,8 +1,8 @@
 # Module
 
 Python modules are hard.  `module` attempts to make them easier to write in the interpreter.
-Here's a quick usage example:
 
+## Basic Usage
 
 ```
 >>> import module
@@ -18,4 +18,21 @@ Here's a quick usage example:
 <module 'Wat'>
 >>> module
 <class 'module.Module'>
+```
+
+
+## Inheritance
+
+Shockingly, modules cannot be inherited from, therefore they are treated as metaclasses:
+
+```
+import module
+
+
+class Wat(metaclass=module):
+  pass
+
+
+class Wat2(metaclass=Wat):
+  pass
 ```
