@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='module',
-    version='1.0.0',
+    version='0.1.0a1',
     description='A module metaclass, to make your classes into modules.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -13,6 +13,9 @@ setup(
     license='MIT',
     classifiers=[
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3 :: Only',
+        'Development Status :: 3 - Alpha',
+        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
+    python_requires='>=3.5',
     packages=['module'])
