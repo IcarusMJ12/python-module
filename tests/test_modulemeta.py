@@ -1,4 +1,4 @@
-import module
+import modulemeta as module
 
 
 class Wat(metaclass=module):

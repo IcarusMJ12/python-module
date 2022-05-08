@@ -2,8 +2,8 @@ from setuptools import setup
 
 
 setup(
-    name='module',
-    version='0.1.0a1',
+    name='modulemeta',
+    version='0.1.0a2',
     description='A module metaclass, to make your classes into modules.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -18,4 +18,4 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     python_requires='>=3.5',
-    packages=['module'])
+    packages=['modulemeta'])
