@@ -1,11 +1,11 @@
-# Module
+# ModuleMeta
 
-Python modules are hard.  `module` attempts to make them easier to write in the interpreter.
+Python modules are hard.  `modulemeta` attempts to make them easier to write in the interpreter.
 
 ## Basic Usage
 
 ```
->>> import module
+>>> import modulemeta as module
 >>> class Wat(metaclass=module):
 ...   _ermelon = 5
 ...
@@ -26,7 +26,7 @@ Python modules are hard.  `module` attempts to make them easier to write in the 
 Shockingly, modules cannot be inherited from, therefore they are treated as metaclasses:
 
 ```
-import module
+import modulemeta as module
 
 
 class Wat(metaclass=module):
