@@ -4,7 +4,7 @@ import nox
 nox.options.sessions = ('mypy', 'style', 'unit')
 
 
-@nox.session
+@nox.session(python=('3.9', '3.10'))
 def mypy(session):
   def type(session):
     session.install('mypy')
@@ -18,7 +18,7 @@ def style(session):
               'noxfile.py')
 
 
-@nox.session
+@nox.session(python=('3.9', '3.10'))
 def unit(session):
   session.install('pytest', 'pytest-cov')
   session.run('python', 'setup.py', 'develop')
