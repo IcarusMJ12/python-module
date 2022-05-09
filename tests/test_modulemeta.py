@@ -1,17 +1,17 @@
-import modulemeta as module
+from modulemeta import Module
 
 
-class Wat(metaclass=module):
+class Wat(metaclass=Module):
   'Waat'
 
   _ermelon = 5
   arr = [1, 2, 3]
 
-  def ermelon():
-    return _ermelon
+  def ermelon():  # type: ignore[misc] # mypy thinks this is a method
+    return _ermelon  # noqa
 
 
-class Wat2(metaclass=Wat):
+class Wat2(metaclass=Wat):  # type: ignore[misc]  # `Wat` is not a `type`
   'Waat2'
 
   _ermelon = 7

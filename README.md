@@ -5,19 +5,17 @@ Python modules are hard.  `modulemeta` attempts to make them easier to write in 
 ## Basic Usage
 
 ```
->>> import modulemeta as module
->>> class Wat(metaclass=module):
+>>> from modulemeta import Module
+>>> class Wat(metaclass=Module):
 ...   _ermelon = 5
 ...
-...   def ermelon():
+...   def ermelon():  # type: ignore[misc]
 ...     return _ermelon
 ...
 >>> Wat.ermelon()
 5
 >>> Wat
 <module 'Wat'>
->>> module
-<class 'module.Module'>
 ```
 
 
@@ -26,13 +24,13 @@ Python modules are hard.  `modulemeta` attempts to make them easier to write in 
 Shockingly, modules cannot be inherited from, therefore they are treated as metaclasses:
 
 ```
-import modulemeta as module
+from modulemeta import Module
 
 
-class Wat(metaclass=module):
+class Wat(metaclass=Module):
   pass
 
 
-class Wat2(metaclass=Wat):
+class Wat2(metaclass=Wat):  # type: ignore[misc]
   pass
 ```

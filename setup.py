@@ -3,8 +3,8 @@ from setuptools import setup
 
 setup(
     name='modulemeta',
-    version='0.1.0a2',
-    description='A module metaclass, to make your classes into modules.',
+    version='0.2.0a1',
+    description='A Module metaclass, to make your classes into modules.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/megawidget/python-module',
