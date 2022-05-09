@@ -1,6 +1,9 @@
 import nox
 
 
+nox.options.sessions = ('mypy', 'style', 'unit')
+
+
 @nox.session
 def mypy(session):
   def type(session):
@@ -22,3 +25,12 @@ def unit(session):
   session.run('pytest', '-v', '--cov-report', 'term-missing',
               '--cov-fail-under=100', '--cov-config=.coveragerc', '--cov',
               'modulemeta/', 'tests/', 'modulemeta/')
+
+
+@nox.session
+def pypi(session):
+  session.install('build', 'twine')
+  session.run('rm', '-rf', 'sdist', external=True)
+  session.run('python', '-m', 'build')
+  session.run('twine', 'check', 'dist/*')
+  session.run('twine', 'upload', 'dist/*')
